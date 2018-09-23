@@ -54,6 +54,33 @@
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.jiedaibao.silt4j</groupId>
+            <artifactId>silt4j-dubbo</artifactId>
+            <version>1.1.1-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>ch.qos.logback</groupId>
+                    <artifactId>logback-classic</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>ch.qos.logback</groupId>
+                    <artifactId>logback-core</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.jiedaibao.silt4j</groupId>
+                    <artifactId>silt4j-logback</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.alibaba</groupId>
+                    <artifactId>dubbo</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
     </dependencies>
 
     <build>
@@ -110,11 +137,8 @@
                             <port>8081</port>
                         </connector>
                     </connectors>
-<!--
                     <contextXml>${project.basedir}/src/test/resources/jetty-context.xml</contextXml>
--->
-                    <reload>manual</reload> <!-- automatic
-                    <scanIntervalSeconds>10</scanIntervalSeconds> -->
+                    <reload>manual</reload>
                     <webAppConfig>
                         <contextPath>/</contextPath>
                     </webAppConfig>
@@ -142,7 +166,7 @@
             </properties>
             <build>
                 <filters>
-                    <filter>../profiles/${app.env}/java-demo-test.properties</filter>
+                    <filter>../profiles/${app.env}/javademo-test.properties</filter>
                     <filter>../profiles/${app.env}/config-test.properties</filter>
                 </filters>
             </build>

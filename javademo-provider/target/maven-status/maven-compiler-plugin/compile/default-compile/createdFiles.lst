@@ -1,4 +1,5 @@
 com/zyt/javademo/provider/bean/BaseResult.class
 com/zyt/javademo/provider/bean/FailureResult.class
+com/zyt/javademo/provider/service/InnerApiService.class
 com/zyt/javademo/provider/bean/AbstractResult.class
 com/zyt/javademo/provider/bean/SuccessResult.class
