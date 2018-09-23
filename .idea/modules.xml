@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/javademo-web/java-demo-web.iml" filepath="$PROJECT_DIR$/javademo-web/java-demo-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javademo.iml" filepath="$PROJECT_DIR$/javademo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javademo-api/javademo-api.iml" filepath="$PROJECT_DIR$/javademo-api/javademo-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javademo-provider/javademo-provider.iml" filepath="$PROJECT_DIR$/javademo-provider/javademo-provider.iml" />
+    </modules>
+  </component>
+</project>

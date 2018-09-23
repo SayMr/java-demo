@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Bean头部 -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd  
+            http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+              http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+    <!-- springmvc默认配置文件 -->
+
+    <!-- 激活@Controller模式 -->
+    <mvc:annotation-driven/>
+    <mvc:default-servlet-handler/>
+    <!-- 对包中的所有类进行扫描，以完成Bean创建和自动依赖注入的功能 需要更改 -->
+    <context:component-scan base-package="com.plg.dhsale.web.controller" use-default-filters="false">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+    <context:component-scan base-package="com.plg.base.common.controller.**"/>
+
+
+    <mvc:annotation-driven>
+        <!--设置不使用默认的消息转换器-->
+        <mvc:message-converters register-defaults="false">
+            <!--配置spring的转换器-->
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter"/>
+
+            <bean class="org.springframework.http.converter.support.AllEncompassingFormHttpMessageConverter"/>
+
+            <bean class="org.springframework.http.converter.ByteArrayHttpMessageConverter"/>
+
+            <bean class="org.springframework.http.converter.BufferedImageHttpMessageConverter"/>
+
+            <!--配置fastjson中实现HttpMessageConverter接口的转换器-->
+            <bean id="fastJsonHttpMessageConverter"
+                  class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter4">
+                <!--加入支持的媒体类型，返回contentType-->
+                <property name="supportedMediaTypes">
+                    <list>
+                        <!--这里顺序不能反，一定要先写text/html，不然IE下会出现下载提示-->
+                        <value>text/html;charset=UTF-8</value>
+                        <value>application/json;charset=UTF-8</value>
+                    </list>
+                </property>
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
+    <bean id="viewResolver"
+          class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass"
+                  value="org.springframework.web.servlet.view.JstlView"/>
+        <property name="prefix">
+            <value>/WEB-INF/jsp/</value>
+        </property>
+        <property name="suffix">
+            <value>.jsp</value>
+        </property>
+    </bean>
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="com.plg.base.common.interceptor.TraceInterceptor"/>
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/api/**"/>
+            <bean class="com.zyt.javademo.web.interceptor.SessionInterceptor"/>
+        </mvc:interceptor>
+
+    </mvc:interceptors>
+
+    <bean id="exceptionInterceptor" class="com.plg.base.common.handler.CustomExceptionHandler"/>
+    <aop:config>
+        <!--切入点-->
+        <aop:pointcut id="cPointCut" expression="execution(public * com.zyt.javademo.web.controller..*.*(..))"/>
+        <!-- 在该切入点使用自定义拦截器 -->
+        <aop:advisor pointcut-ref="cPointCut" advice-ref="exceptionInterceptor"/>
+    </aop:config>
+
+</beans>
