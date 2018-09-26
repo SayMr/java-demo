@@ -83,11 +83,11 @@
                     <groupId>com.jiedaibao.silt4j</groupId>
                     <artifactId>silt4j-logback</artifactId>
                 </exclusion>
-                <exclusion>
-                    <groupId>com.alibaba</groupId>
-                    <artifactId>dubbo</artifactId>
-                </exclusion>
             </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
         </dependency>
     </dependencies>
 
