@@ -5,10 +5,10 @@
 	<description>各个环境配置</description>
 	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"> 
 	    <property name="locations"> 
-	        <list> 
+	        <list>
 	            <value>classpath:javademo.properties</value>
 				<value>classpath:config.properties</value>
-			</list> 
+			</list>
 		</property> 
 		 <property name="ignoreUnresolvablePlaceholders" value="true" /> 
 	</bean>
