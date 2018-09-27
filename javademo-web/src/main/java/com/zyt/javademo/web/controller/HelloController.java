@@ -1,7 +1,7 @@
 package com.zyt.javademo.web.controller;
 
 import com.zyt.api.context.Result;
-import com.zyt.javademo.provider.bean.BaseResult;
+import com.zyt.javademo.provider.bean.context.BaseResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

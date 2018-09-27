@@ -2,7 +2,7 @@ package com.zyt.javademo.web.interceptor;
 
 import com.zyt.api.context.Constants;
 import com.zyt.api.context.ServiceException;
-import com.zyt.javademo.provider.bean.BaseResult;
+import com.zyt.javademo.provider.bean.context.BaseResult;
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 import org.slf4j.Logger;
