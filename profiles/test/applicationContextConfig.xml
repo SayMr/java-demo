@@ -7,6 +7,7 @@
 	    <property name="locations"> 
 	        <list> 
 	            <value>classpath:javademo.properties</value>
+				<value>classpath:config.properties</value>
 			</list> 
 		</property> 
 		 <property name="ignoreUnresolvablePlaceholders" value="true" /> 
