@@ -1,3 +1,4 @@
+com/zyt/javademo/provider/service/HelloServiceImpl.class
 com/zyt/javademo/provider/common/ShardedRedisUtil$7.class
 com/zyt/javademo/provider/dao/DbConnectionCheck.class
 com/zyt/javademo/provider/common/ShardedRedisUtil$2.class
@@ -5,9 +6,9 @@ com/zyt/javademo/provider/bean/context/BaseResult.class
 com/zyt/javademo/provider/bean/context/AbstractResult.class
 com/zyt/javademo/provider/common/ShardedRedisUtil$12.class
 com/zyt/javademo/provider/common/SharedRedisConfig.class
+com/zyt/javademo/provider/task/TestJob.class
 com/zyt/javademo/provider/common/ShardedRedisUtil$1.class
 com/zyt/javademo/provider/common/ShardedRedisExecutor.class
-com/zyt/javademo/provider/service/InnerApiService.class
 com/zyt/javademo/provider/common/ShardedRedisUtil$4.class
 com/zyt/javademo/provider/common/ShardedRedisUtil$14.class
 com/zyt/javademo/provider/common/ShardedRedisUtil$9.class

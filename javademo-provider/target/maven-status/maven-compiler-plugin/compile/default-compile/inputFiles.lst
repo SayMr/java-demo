@@ -1,8 +1,9 @@
 /Users/zhuyintao/IdeaProjects/java-demo/javademo-provider/src/main/java/com/zyt/javademo/provider/dao/DbConnectionCheck.java
 /Users/zhuyintao/IdeaProjects/java-demo/javademo-provider/src/main/java/com/zyt/javademo/provider/bean/context/FailureResult.java
 /Users/zhuyintao/IdeaProjects/java-demo/javademo-provider/src/main/java/com/zyt/javademo/provider/common/SharedRedisConfig.java
-/Users/zhuyintao/IdeaProjects/java-demo/javademo-provider/src/main/java/com/zyt/javademo/provider/service/InnerApiService.java
+/Users/zhuyintao/IdeaProjects/java-demo/javademo-provider/src/main/java/com/zyt/javademo/provider/task/TestJob.java
 /Users/zhuyintao/IdeaProjects/java-demo/javademo-provider/src/main/java/com/zyt/javademo/provider/bean/context/AbstractResult.java
 /Users/zhuyintao/IdeaProjects/java-demo/javademo-provider/src/main/java/com/zyt/javademo/provider/common/ShardedRedisExecutor.java
 /Users/zhuyintao/IdeaProjects/java-demo/javademo-provider/src/main/java/com/zyt/javademo/provider/bean/context/BaseResult.java
 /Users/zhuyintao/IdeaProjects/java-demo/javademo-provider/src/main/java/com/zyt/javademo/provider/common/ShardedRedisUtil.java
+/Users/zhuyintao/IdeaProjects/java-demo/javademo-provider/src/main/java/com/zyt/javademo/provider/service/HelloServiceImpl.java

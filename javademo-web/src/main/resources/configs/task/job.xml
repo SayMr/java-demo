@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:job="http://www.dangdang.com/schema/ddframe/job"
+       xmlns:reg="http://www.dangdang.com/schema/ddframe/reg"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans.xsd
+         http://www.dangdang.com/schema/ddframe/job
+         http://www.dangdang.com/schema/ddframe/job/job.xsd
+         http://www.dangdang.com/schema/ddframe/reg
+         http://www.dangdang.com/schema/ddframe/reg/reg.xsd
+        ">
+
+    <reg:zookeeper id="regCenter" server-lists="127.0.0.1:2181,127.0.0.1:2182,127.0.0.1:2183" namespace="dd-job"
+          base-sleep-time-milliseconds="1000" max-sleep-time-milliseconds="3000" max-retries="3"/>
+
+    <job:simple id="testJob" class="com.zyt.javademo.provider.task.TestJob"
+                cron="0/30 * * * * ?"
+                description="测试job，每30s执行, 0分片"
+                registry-center-ref="regCenter"
+                sharding-total-count="6"
+                monitor-execution="true" failover="true" disabled="false" overwrite="true"/>
+
+</beans>
