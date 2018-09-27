@@ -1,7 +1,7 @@
 package com.zyt.javademo.web.controller.op;
 
 import com.alibaba.dubbo.common.utils.StringUtils;
-import com.zyt.api.context.Result;
+import com.zyt.javademo.api.context.Result;
 import com.zyt.javademo.provider.bean.context.BaseResult;
 import com.zyt.javademo.provider.common.ShardedRedisUtil;
 import com.zyt.javademo.provider.dao.DbConnectionCheck;

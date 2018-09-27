@@ -6,6 +6,5 @@
          http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
          http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
-    <bean id="innerApiService" class="com.zyt.javademo.provider.service.InnerApiService"/>
-    <dubbo:service interface="com.plg.javademo.api.service.IInnerApiService" ref="innerApiService" version="1.0.0" />
+    <dubbo:service interface="com.zyt.javademo.api.service.HelloService" ref="helloService" version="1.0.0" />
 </beans>

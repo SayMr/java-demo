@@ -1,7 +1,6 @@
 package com.zyt.javademo.provider.bean.context;
 
-import com.zyt.api.context.ReMessage;
-import com.zyt.javademo.provider.bean.context.AbstractResult;
+import com.zyt.javademo.api.context.ReMessage;
 
 /**
  * Created by zhuyintao.

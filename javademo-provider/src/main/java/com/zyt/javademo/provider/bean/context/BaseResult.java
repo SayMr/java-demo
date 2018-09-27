@@ -1,8 +1,8 @@
 package com.zyt.javademo.provider.bean.context;
 
-import com.zyt.api.context.Constants;
-import com.zyt.api.context.ReMessage;
-import com.zyt.api.context.Result;
+import com.zyt.javademo.api.context.Constants;
+import com.zyt.javademo.api.context.ReMessage;
+import com.zyt.javademo.api.context.Result;
 
 /**
  * Created by zhuyintao.

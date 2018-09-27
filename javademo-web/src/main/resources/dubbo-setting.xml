@@ -10,7 +10,7 @@
     <dubbo:provider threadpool="fixed" threads="500" timeout="5000"  accepts="5000"/>
 
     <dubbo:application name="javademo" />
-    <dubbo:registry protocol="zookeeper" address="100.73.17.2:17180" register="true" check="true" client="curator2">
+    <dubbo:registry protocol="zookeeper" address="127.0.0.1:17180" register="true" check="true" client="curator2">
         <dubbo:parameter key="router" value="operator"/>
         <dubbo:parameter key="runtime" value="true"/>
     </dubbo:registry>
