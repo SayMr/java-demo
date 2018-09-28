@@ -20,4 +20,24 @@ public class HelloController {
         log.info("hello,world!!!");
         return BaseResult.success();
     }
+
+    @RequestMapping(value = "/log")
+    public Result log() {
+        try {
+            Integer x = null;
+            ++x;
+        } catch (Exception e) {
+            log.error(""+e);
+            log.error(e.toString());
+            log.error(e.getMessage());
+            log.error(null, e);
+            log.error("", e);
+            log.error("{}", e);
+            log.error("{}", e.getMessage());
+            log.error("Error reading configuration file: " + e);
+            log.error("Error reading configuration file: " + e.getMessage());
+            log.error("Error reading configuration file", e);
+        }
+        return BaseResult.success();
+    }
 }

@@ -11,7 +11,7 @@
          http://www.dangdang.com/schema/ddframe/reg/reg.xsd
         ">
 
-    <reg:zookeeper id="regCenter" server-lists="127.0.0.1:2181,127.0.0.1:2182,127.0.0.1:2183" namespace="dd-job"
+    <reg:zookeeper id="regCenter" server-lists="${zookeeper.address}" namespace="dd-job"
           base-sleep-time-milliseconds="1000" max-sleep-time-milliseconds="3000" max-retries="3"/>
 
     <job:simple id="testJob" class="com.zyt.javademo.provider.task.TestJob"

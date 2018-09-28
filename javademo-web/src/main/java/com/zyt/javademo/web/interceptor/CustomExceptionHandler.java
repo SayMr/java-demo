@@ -3,6 +3,7 @@ package com.zyt.javademo.web.interceptor;
 import com.zyt.javademo.api.context.Constants;
 import com.zyt.javademo.api.context.ServiceException;
 import com.zyt.javademo.provider.bean.context.BaseResult;
+import lombok.extern.slf4j.Slf4j;
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 import org.slf4j.Logger;
@@ -14,8 +15,8 @@ import org.springframework.validation.BindException;
  * Created by zhuyintao.
  * Date: 2018/9/23
  */
+@Slf4j
 public class CustomExceptionHandler implements MethodInterceptor {
-    private static final Logger log = LoggerFactory.getLogger(CustomExceptionHandler.class);
 
     public CustomExceptionHandler() {
     }
